@@ -7,11 +7,22 @@
              x:Class="AplicativoDataBiding.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
         <Label Text="Data Biding Exemplo" HorizontalOptions="Center" FontSize="Large" TextColor="Red"/>
-        <Label Text="One Way" HorizontalOptions="Center" FontSize="Large" TextColor="Red"/> <!--primeiro tipo de data biding-->
-        <Entry Text="{Binding Text, Source={x:Reference entry_mainpage_onewaytxt}, Mode=OneWay}"/>
+
+        <!--primeiro tipo de data biding-->
+        <Label Text="One Way" HorizontalOptions="Center" FontSize="Large" TextColor="Blue"/> 
+        <Entry Text="{Binding Text, Source={x:Reference entry_mainpage_onewaytxt}, Mode=OneWay}"/> 
         <Entry x:Name="entry_mainpage_onewaytxt"/>
+
+        <!--segundo tipo de data biding-->
+        <Label Text="Two Way" HorizontalOptions="Center" FontSize="Large" TextColor="Blue"/>
+        <Entry Text="{Binding Text, Source={x:Reference entry_mainpage_twowaytxt}, Mode=TwoWay}"/>
+        <Entry x:Name="entry_mainpage_twowaytxt"/>
+
+        <!--terceiro tipo de data biding-->
+        <Label Text="One Way to Source" HorizontalOptions="Center" FontSize="Large" TextColor="Blue"/>
+        <Entry Text="{Binding Text, Source={x:Reference entry_mainpage_onewaysourcetxt}, Mode=OneWayToSource}"/>
+        <Entry x:Name="entry_mainpage_onewaysourcetxt"/>
     </StackLayout>
 
 </ContentPage>
